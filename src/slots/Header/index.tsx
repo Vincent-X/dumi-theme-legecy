@@ -7,6 +7,7 @@ import Logo from '../Logo';
 import Navbar from '../Navbar';
 import RtlSwitch from '../RtlSwitch';
 import SearchBar from '../SearchBar';
+import ColorSwitch from '../ColorSwitch';
 import React, { useState, type FC } from 'react';
 import './index.less';
 
@@ -31,6 +32,7 @@ const Header: FC = () => {
           <div className="dumi-legecy-header-right-aside">
             <LangSwitch className="item" />
             <RtlSwitch />
+            <ColorSwitch />
             <HeaderExtra />
           </div>
         </section>

@@ -3,14 +3,11 @@
 // DO NOT CHANGE IT MANUALLY!
 import React, { useState, useEffect, useRef } from 'react';
 import { useOutlet, history } from 'dumi';
-import { SiteContext } from '/Users/VincentX/Dev/Project/dumi/dumi-theme-legecy/node_modules/.pnpm/dumi@2.0.18_wnhobytbzuxeuvkr3fshiwzzla/node_modules/dumi/dist/client/theme-api/context.js';
+import { SiteContext } from '/Users/VincentX/Dev/Project/dumi/dumi-theme-legecy/node_modules/.pnpm/dumi@2.1.3_wnhobytbzuxeuvkr3fshiwzzla/node_modules/dumi/dist/client/theme-api/context.js';
 import { demos, components } from '../meta';
 import { locales } from '../locales/config';
 
-const entryExports = {
-  
-  
-};
+const entryExports = {};
 
 export default function DumiContextWrapper() {
   const outlet = useOutlet();
@@ -32,16 +29,26 @@ export default function DumiContextWrapper() {
   }, []);
 
   return (
-    <SiteContext.Provider value={{
-      pkg: {},
-      entryExports,
-      demos,
-      components,
-      locales,
-      loading,
-      setLoading,
-      themeConfig: {"footer":"Open-source MIT Licensed | Copyright © 2019-present\n<br />\nPowered by self","hd":{"rules":[]},"rtl":true,"name":"dumi","logo":"https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4g3_w256_h256.png"},
-    }}>
+    <SiteContext.Provider
+      value={{
+        pkg: {},
+        entryExports,
+        demos,
+        components,
+        locales,
+        loading,
+        setLoading,
+        themeConfig: {
+          footer:
+            'Open-source MIT Licensed | Copyright © 2019-present\n<br />\nPowered by self',
+          prefersColor: { default: 'light', switch: true },
+          hd: { rules: [] },
+          rtl: true,
+          name: 'dumi',
+          logo: 'https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4g3_w256_h256.png',
+        },
+      }}
+    >
       {outlet}
     </SiteContext.Provider>
   );

@@ -9,8 +9,7 @@ import { createPluginManager } from './core/plugin';
 import { createHistory } from './core/history';
 import { ApplyPluginsType } from 'umi';
 
-
-const publicPath = "/";
+const publicPath = '/';
 const runtimePublicPath = false;
 
 async function render() {
@@ -42,7 +41,7 @@ async function render() {
     ...contextOpts.historyOpts,
   });
 
-  return (pluginManager.applyPlugins({
+  return pluginManager.applyPlugins({
     key: 'render',
     type: ApplyPluginsType.compose,
     initialValue() {
@@ -65,9 +64,8 @@ async function render() {
       });
       return renderClient(modifiedContext);
     },
-  }))();
+  })();
 }
-
 
 // always remove trailing slash from location.pathname
 if (
@@ -82,6 +80,27 @@ if (
   );
 }
 
+(function () {
+  var cache =
+    (typeof navigator !== 'undefined' &&
+      navigator.cookieEnabled &&
+      typeof window.localStorage !== 'undefined' &&
+      localStorage.getItem('dumi:prefers-color')) ||
+    'light';
+  var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var enums = ['light', 'dark', 'auto'];
+
+  document.documentElement.setAttribute(
+    'data-prefers-color',
+    cache === enums[2]
+      ? isDark
+        ? enums[1]
+        : enums[0]
+      : enums.indexOf(cache) > -1
+      ? cache
+      : enums[0],
+  );
+})();
 render();
 
 window.g_umi = {
