@@ -1,0 +1,86 @@
+@import (reference) '../../styles/variables.less';
+
+.@{prefix}-features {
+  margin: 48px auto;
+  max-width: 1200px;
+  padding: 0 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &[data-cols='2'] > &-item {
+    width: 46%;
+
+    &:nth-child(odd) {
+      margin-inline-end: 8%;
+    }
+
+    @media @mobile {
+      width: 100%;
+      margin-inline-end: 0;
+    }
+  }
+
+  &[data-cols='3'] > &-item {
+    width: 28%;
+
+    &:not(:nth-child(3n)) {
+      margin-inline-end: 6%;
+    }
+
+    @media @mobile {
+      width: 100%;
+      margin-inline-end: 0;
+    }
+  }
+
+  &-item {
+    margin: 12px 0;
+    float: left;
+    text-align: center;
+
+    > i {
+      font-size: 24px;
+      font-style: normal;
+
+      @media @mobile {
+        font-size: 24px;
+      }
+    }
+
+    > h3 {
+      margin: 4px 0;
+      color: @c-text;
+      font-weight: 500;
+      font-size: 20px;
+      a {
+        color: @c-primary;
+        &:not(:hover) {
+          text-decoration: none;
+        }
+      }
+
+      @media @mobile {
+        font-size: 18px;
+      }
+    }
+
+    > p {
+      margin: 12px 0;
+      color: @c-text-secondary;
+      font-size: 16px;
+      line-height: 1.475;
+
+      @media @mobile {
+        font-size: 14px;
+      }
+
+      a {
+        color: @c-primary;
+
+        &:not(:hover) {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
