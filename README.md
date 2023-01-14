@@ -8,6 +8,7 @@ A theme package for the [dumi](https://d.umijs.org) framework.
 A Dumi 1.x theme for Dumi 2.0, Base on `dumi-theme-default`, this project is work in progress.
 
 基于2.x的默认主题修改的1.x主题,只修改了部分样式. WIP
+![image](https://github.com/Vincent-X/dumi-theme-legecy/blob/master/preview.png)
 
 ## Usage
 
