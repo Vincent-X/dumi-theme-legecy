@@ -3,5 +3,8 @@
     "start": "dumi dev",
     "build": "dumi build",
     "preview": "dumi preview"
+  },
+  "devDependencies": {
+    "dumi": "^2.1.3"
   }
 }

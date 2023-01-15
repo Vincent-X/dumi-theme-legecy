@@ -31,7 +31,10 @@
     font-size: 14px;
     line-height: 1.58;
     direction: ltr;
-    background: transparent;
+    // background: transparent;
+    @{dark-selector} & {
+      background: transparent;
+    }
 
     // remove shadow from coy theme
     &::before,
