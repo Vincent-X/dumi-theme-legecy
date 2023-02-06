@@ -16,11 +16,14 @@ export default defineConfig({
     footer: `Open-source MIT Licensed | Copyright © 2019-present
 <br />
 Powered by self`,
+    socialLinks: {
+      github: 'https://github.com/umijs/dumi',
+    },
   },
   sitemap: { hostname: 'https://d.umijs.org' },
   locales: [
     { id: 'zh-CN', name: '中文' },
     { id: 'en-US', name: 'English' },
-    // { id: 'zh-HK', name: '繁体中文' },
+    { id: 'zh-HK', name: '繁体中文' },
   ],
 });

@@ -1,19 +1,36 @@
 import HeaderExtra from '../HeadeExtra';
 import { ReactComponent as IconClose } from '@ant-design/icons-svg/inline-svg/outlined/close.svg';
 import { ReactComponent as IconMenu } from '@ant-design/icons-svg/inline-svg/outlined/menu.svg';
-import { useRouteMeta } from 'dumi';
+import { useRouteMeta, useSiteData } from 'dumi';
 import LangSwitch from '../LangSwitch';
 import Logo from '../Logo';
 import Navbar from '../Navbar';
 import RtlSwitch from '../RtlSwitch';
 import SearchBar from '../SearchBar';
 import ColorSwitch from '../ColorSwitch';
-import React, { useState, type FC } from 'react';
+import SocialIcon from '../SocialIcon';
+import { SocialTypes } from 'dumi/dist/client/theme-api/types';
+
+import React, { useState, useMemo, type FC } from 'react';
 import './index.less';
 
 const Header: FC = () => {
   const { frontmatter } = useRouteMeta();
   const [showMenu, setShowMenu] = useState(false);
+  const { themeConfig } = useSiteData();
+
+  const extraIcons = useMemo(
+    () =>
+      themeConfig.socialLinks
+        ? Object.keys(themeConfig.socialLinks)
+            .slice(0, 5)
+            .map((key) => ({
+              icon: key as SocialTypes,
+              link: themeConfig.socialLinks[key as SocialTypes],
+            }))
+        : [],
+    [themeConfig.socialLinks],
+  );
 
   return (
     <div
@@ -34,6 +51,9 @@ const Header: FC = () => {
             <RtlSwitch />
             <ColorSwitch />
             <HeaderExtra />
+            {extraIcons.map((item) => (
+              <SocialIcon icon={item.icon} link={item.link} key={item.link} />
+            ))}
           </div>
         </section>
         <button
