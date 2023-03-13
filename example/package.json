@@ -5,6 +5,6 @@
     "preview": "dumi preview"
   },
   "devDependencies": {
-    "dumi": "^2.1.7"
+    "dumi": "^2.1.15"
   }
 }

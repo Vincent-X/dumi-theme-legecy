@@ -76,13 +76,13 @@ demo:
 配置 `demo.cols` 后,以下多个 demo 完将会被渲染为双栏布局：
 
 ```md
-<code src="./demos/cols.tsx">分栏 1</code>
-<code src="./demos/cols.tsx">分栏 2</code>
-<code src="./demos/cols.tsx">分栏 3</code>
-<code src="./demos/cols.tsx">分栏 4</code>
+<code id="cols1" src="./demos/cols.tsx">分栏 1</code>
+<code id="cols2" src="./demos/cols.tsx">分栏 2</code>
+<code id="cols3" src="./demos/cols.tsx">分栏 3</code>
+<code id="cols4" src="./demos/cols.tsx">分栏 4</code>
 ```
 
-<code src="./demos/cols.tsx">分栏 1</code>
-<code src="./demos/cols.tsx">分栏 2</code>
-<code src="./demos/cols.tsx">分栏 3</code>
-<code src="./demos/cols.tsx">分栏 4</code>
+<code id="cols1" src="./demos/cols.tsx">分栏 1</code>
+<code id="cols2" src="./demos/cols.tsx">分栏 2</code>
+<code id="cols3" src="./demos/cols.tsx">分栏 3</code>
+<code id="cols4" src="./demos/cols.tsx">分栏 4</code>
