@@ -13,6 +13,10 @@ export { Mask as SearchMask } from './Mask';
 const isAppleDevice = /(mac|iphone|ipod|ipad)/i.test(
   typeof navigator !== 'undefined' ? navigator?.platform : '',
 );
+/** Determine if the element that triggered the event is an input element */
+const isInput = (target: HTMLElement) =>
+  ['TEXTAREA', 'INPUT'].includes(target.tagName) ||
+  target.contentEditable === 'true';
 
 const SearchBar: FC = () => {
   const [focusing, setFocusing] = useState(false);
@@ -32,7 +36,7 @@ const SearchBar: FC = () => {
     const handler = (ev: KeyboardEvent) => {
       if (
         ((isAppleDevice ? ev.metaKey : ev.ctrlKey) && ev.key === 'k') ||
-        ev.key === '/'
+        (ev.key === '/' && !isInput(ev.target as HTMLElement))
       ) {
         ev.preventDefault();
 
