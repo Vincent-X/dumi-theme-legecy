@@ -9,13 +9,13 @@ import {
   useSidebarData,
   useSiteData,
 } from 'dumi';
-import Content from 'dumi/theme-default/slots/Content';
-import Features from 'dumi/theme-default/slots/Features';
-import Footer from 'dumi/theme-default/slots/Footer';
-import Header from 'dumi/theme-default/slots/Header';
-import Hero from 'dumi/theme-default/slots/Hero';
-import Sidebar from 'dumi/theme-default/slots/Sidebar';
-import Toc from 'dumi/theme-default/slots/Toc';
+import Content from 'dumi/theme/slots/Content';
+import Features from 'dumi/theme/slots/Features';
+import Footer from 'dumi/theme/slots/Footer';
+import Header from 'dumi/theme/slots/Header';
+import Hero from 'dumi/theme/slots/Hero';
+import Sidebar from 'dumi/theme/slots/Sidebar';
+import Toc from 'dumi/theme/slots/Toc';
 import React, { useEffect, useState, type FC } from 'react';
 import './index.less';
 

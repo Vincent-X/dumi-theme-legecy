@@ -1,6 +1,6 @@
 {
-  "name": "dumi-theme-legecy",
-  "version": "0.1.10",
+  "name": "@vincent-x/dumi-theme-legecy",
+  "version": "0.0.1",
   "description": "基于Dumi 2的默认主题修改的dumi 1.x主题",
   "types": "dist/types.d.ts",
   "scripts": {
