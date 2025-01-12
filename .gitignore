@@ -6,3 +6,4 @@
 .dumi/tmp-production
 .DS_Store
 /example/.dumi
+.tmp

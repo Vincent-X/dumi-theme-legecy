@@ -189,7 +189,7 @@ export default () => <p>我会被直接嵌入</p>;
  * inline: true
  */
 import React from 'react';
-import Previewer from 'dumi/theme/builtins/Previewer';
+import Previewer from 'dumi/theme-default/builtins/Previewer';
 
 export default () => (
   <Previewer

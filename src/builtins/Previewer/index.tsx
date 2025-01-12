@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import { IPreviewerProps, useLocation } from 'dumi';
-import PreviewerActions from 'dumi/theme/slots/PreviewerActions';
+import PreviewerActions from 'dumi/theme-default/slots/PreviewerActions';
 import React, { type FC } from 'react';
 import './index.less';
 
@@ -53,7 +53,7 @@ const Previewer: FC<IPreviewerProps> = (props) => {
             )}
           </div>
         )}
-        <PreviewerActions {...props} />
+        <PreviewerActions demoContainer={props.demoContainer} {...props} />
       </div>
     </div>
   );

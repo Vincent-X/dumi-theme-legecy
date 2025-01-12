@@ -11,7 +11,7 @@ dumi 提供的所有 API 均依赖 dumi 框架提供的编译时及运行时环�
 dumi 2 基于 Umi 4，除了自身特有的 API 以外，同样也支持 Umi 4 提供的基础 API，两者均从 `dumi` 包名中引入。
 
 ```ts
-import { useLocale, useAppData } from "dumi";
+import { useLocale, useAppData } from 'dumi';
 
 // 其他逻辑
 ```
@@ -24,12 +24,12 @@ import { useLocale, useAppData } from "dumi";
 - 场景：自定义 demo 预览器按钮 `PreviewerActions` 时可能需要用到
 - 用法：
 
-假设在项目中创建 `.dumi/theme/slots/PreviewerActions.tsx` 用于覆盖默认的预览器按钮：
+假设在项目中创建 `.dumi/theme-default/slots/PreviewerActions.tsx` 用于覆盖默认的预览器按钮：
 
 ```tsx | pure
-import { openCodeSandbox } from "dumi";
-import DumiPreviewerActions from "dumi/theme-default/slots/PreviewerActions";
-import React from "react";
+import { openCodeSandbox } from 'dumi';
+import DumiPreviewerActions from 'dumi/theme-default/slots/PreviewerActions';
+import React from 'react';
 
 const PreviewerActions: typeof DumiPreviewerActions = (props) => (
   <button type="button" onClick={() => openCodeSandbox(props)}>
@@ -45,7 +45,7 @@ const PreviewerActions: typeof DumiPreviewerActions = (props) => (
 - 用法：
 
 ```ts
-import { useAtomAssets } from "dumi";
+import { useAtomAssets } from 'dumi';
 
 const Example = () => {
   const assets = useAtomAssets();
@@ -63,7 +63,7 @@ const Example = () => {
 - 用法：
 
 ```ts
-import { useFullSidebarData } from "dumi";
+import { useFullSidebarData } from 'dumi';
 
 const Example = () => {
   const sidebar = useFullSidebarData();
@@ -81,7 +81,7 @@ const Example = () => {
 - 用法：
 
 ```ts
-import { useLocale } from "dumi";
+import { useLocale } from 'dumi';
 
 const Example = () => {
   const locale = useLocale();
@@ -101,7 +101,7 @@ const Example = () => {
 > 注意，由于后续会支持二级导航，该 hook 的返回数据结构可能会有些许调整
 
 ```ts
-import { useNavData } from "dumi";
+import { useNavData } from 'dumi';
 
 const Example = () => {
   const nav = useNavData();
@@ -119,7 +119,7 @@ const Example = () => {
 - 用法：
 
 ```ts
-import { useRouteMeta } from "dumi";
+import { useRouteMeta } from 'dumi';
 
 const Example = () => {
   const {
@@ -146,7 +146,7 @@ const Example = () => {
 - 用法：
 
 ```ts
-import { useSiteData } from "dumi";
+import { useSiteData } from 'dumi';
 
 const Example = () => {
   const {
@@ -177,7 +177,7 @@ const Example = () => {
 - 用法：
 
 ```ts
-import { useSidebarData } from "dumi";
+import { useSidebarData } from 'dumi';
 
 const Example = () => {
   const sidebar = useSidebarData();
@@ -195,7 +195,7 @@ const Example = () => {
 - 用法：
 
 ```ts
-import { useSiteSearch } from "dumi";
+import { useSiteSearch } from 'dumi';
 
 const Example = () => {
   const {
@@ -221,7 +221,7 @@ const Example = () => {
 - 用法：
 
 ```ts
-import { useTabMeta } from "dumi";
+import { useTabMeta } from 'dumi';
 
 const Example = () => {
   const {

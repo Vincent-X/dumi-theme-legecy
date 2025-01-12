@@ -30,6 +30,7 @@ const presetIconMap: Record<SocialTypes, FunctionComponent> = {
   zhihu: IconZhihu,
   yuque: IconYuque,
   linkedin: IconLinkedin,
+  x: IconTwitter,
 };
 
 const SocialIcon: FC<SocialIconProps> = (props: SocialIconProps) => {
