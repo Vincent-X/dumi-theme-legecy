@@ -59,6 +59,7 @@
     "@testing-library/react": "^13",
     "@types/chroma-js": "^2",
     "@types/lodash": "^4",
+    "@types/lodash.throttle": "^4.1.9",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-syntax-highlighter": "^15",

@@ -11,14 +11,14 @@ const Navbar: FC = () => {
     <ul className="dumi-legecy-navbar">
       {nav.map((item) => (
         <li key={item.link}>
-          {/^(\w+:)\/\/|^(mailto|tel):/.test(item.link) ? (
-            <a href={item.link} target="_blank" rel="noreferrer">
+          {/^(\w+:)\/\/|^(mailto|tel):/.test(item.link || '') ? (
+            <a href={item.link || ''} target="_blank" rel="noreferrer">
               {item.title}
             </a>
           ) : (
             <Link
-              to={item.link}
-              {...(pathname.startsWith(item.activePath || item.link)
+              to={item.link || ''}
+              {...(pathname.startsWith(item.activePath || item.link || '')
                 ? { className: 'active' }
                 : {})}
             >

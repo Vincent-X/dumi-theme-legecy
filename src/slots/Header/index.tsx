@@ -26,7 +26,7 @@ const Header: FC = () => {
             .slice(0, 5)
             .map((key) => ({
               icon: key as SocialTypes,
-              link: themeConfig.socialLinks[key as SocialTypes],
+              link: themeConfig.socialLinks![key as SocialTypes],
             }))
         : [],
     [themeConfig.socialLinks],
@@ -52,7 +52,11 @@ const Header: FC = () => {
             <ColorSwitch />
             <HeaderExtra />
             {extraIcons.map((item) => (
-              <SocialIcon icon={item.icon} link={item.link} key={item.link} />
+              <SocialIcon
+                icon={item.icon}
+                link={item.link || ''}
+                key={item.link}
+              />
             ))}
           </div>
         </section>
