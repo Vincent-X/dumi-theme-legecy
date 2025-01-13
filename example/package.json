@@ -8,6 +8,6 @@
     "dumi": "^2.4.17"
   },
   "dependencies": {
-    "@vincent-x/dumi-theme-legecy": "^0.0.2"
+    "@vincent-x/dumi-theme-legecy": "^0.0.3"
   }
 }
